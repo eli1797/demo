@@ -1,1 +1,27 @@
 <h1>Hello World from Hello</h1>
+
+<!-- runs code but doesn't return -->
+<% 1 + 1 %>
+
+<!-- this returns output of code -->
+<%= 2 + 2%> <br />
+
+<% target = "world" %>
+<%= "Hello #{target}" %>
+
+<br />
+<br />
+
+<!-- prints out data from @array in DemoController -->
+<% @array.each do |n| %>
+  <%= n %>
+  <br />
+<% end %>
+
+<%= link_to('Index Page', {:action => 'index'}) %> <br />
+
+<!-- accessing instance variables from DemoController -->
+ID: <%= @id %> <br />
+ID: <%= params[:id] %> <br />
+Page: <%= @page %> <br />
+Next Page : <%= @page.to_i + 1%> <br />

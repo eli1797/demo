@@ -4,13 +4,18 @@ class DemoController < ApplicationController
   def index
     #explicit render commands to render a template
     #sets index to use hello template
-    render('hello')
+    render('index')
+    #render('hello')
   end
 
   #action for hello
   def hello
+    # @ declares and instance variable
+    @array = [1,2,3,4,5]
+    @id = params['id']
+    @page = params[:page]
     #explicit render commands to render a template
-    render('index')
+    render('hello')
   end
 
   def other_hello
